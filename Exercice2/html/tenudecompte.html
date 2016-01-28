@@ -10,19 +10,18 @@
   <body>
         <div ng-app="app">
                 <div ng-controller="appCtrl">
-                    <input ng-model="valeur" placeholder="valeur" />
-                    <button ng-click="addDepense()">Ajouter dépense</button>
-                    <ul>
-                        <li ng-repeat="depense in depenses">
-                            {{ depense.valeur }}<span ng-click="rmDepense($index)">×</span>
-                        </li>
-                    </ul>
-                    <strong>Total des dépenses : {{ total }}</strong>
+                    
+                        <input ng-model="valeur" placeholder="dépense" class ="input"/>
+    			        <button ng-click="addDepense()">Ajouter dépense</button>
+    		    	<ul>
+    				    <li ng-repeat="depense in depenses">
+    				    	{{ depense.valeur }} <span ng-click="rmDepense($index)" class ="delete">X</span>
+    				    </li>
+    		    	</ul>
+    		        	<strong>Total des dépenses : {{ total }}</strong>
                 </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="../js/tenudecompte.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
   </body>
 </html>
