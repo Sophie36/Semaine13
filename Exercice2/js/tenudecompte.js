@@ -37,3 +37,5 @@ app.controller('appCtrl', ['$scope', '$http', function ($scope, $http) {
     }
     
     $scope.$watch("depenses", $scope.doTotal, true)
+    
+    }]); 
